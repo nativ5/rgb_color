@@ -15,12 +15,13 @@ with col3:
 rgb_value='('+str(red_value)+','+str(green_value)+','+str(blue_value)+')'
 hex_value='#%02x%02x%02x' % (red_value,green_value,blue_value)
 
-with col1:
+col4, col5, col6 = st.columns(3)
+with col4:
 	st.markdown('''<p  style="font-size: 14px;">Color</p>''', unsafe_allow_html=True)
 	st.markdown(f'''<div style="width:px; height:40px; background-color:{hex_value};">
 					</div>''', unsafe_allow_html=True)
-with col2:
+with col5:
 	st.metric('RGB',rgb_value)
-with col3:	
+with col6:	
 	st.metric('HEX',hex_value.upper())
 	
